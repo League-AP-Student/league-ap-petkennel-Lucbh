@@ -2,7 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Kennel {
+	
 	private List<Pet> petList = new ArrayList<Pet>();
+	
 	
 	public Kennel() {
 		
@@ -14,6 +16,8 @@ public class Kennel {
 	
 
 	public static void main(String[] args) {
+		Kennel k = new Kennel();
+		k.allSpeak();
 			
 
 	}
@@ -24,15 +28,20 @@ public class Kennel {
 	public void allSpeak(){
 		/* code goes here */
 		
+		for (Pet a : petList)
+		{
+			System.out.println(a.getName() + " " + a.speak());
+		}
+		
 
 
-			for (int i = 0; i < petList.size() -1; i++) {
+		/*	for (int i = 0; i < petList.size() -1; i++) {
 
 			System.out.println(petList[i].getName() + petList[i].speak);
 		
 
 			}
-
+*/
 			
 
 	}
